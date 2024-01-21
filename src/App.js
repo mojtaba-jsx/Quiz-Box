@@ -30,18 +30,56 @@ class App extends Component {
 
           <div className="quiz-box-question">
             <p className="quiz-box-question-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, hic.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
+              hic.
             </p>
           </div>
 
           <div className="quiz-box-answers">
             <div className="quiz-box-answer">
-              <img src="" alt="" className="quiz-box-answer-image"/>
+              <img
+                src="./images/elon-musk-4k-rq-1920x1080.jpg"
+                alt=""
+                className="quiz-box-answer-image"
+              />
               <span className="quiz-box-answer-text">
                 Lorem ipsum dolor sit amet.
               </span>
             </div>
 
+            <div className="quiz-box-answer">
+              <img
+                src="./images/elon-musk-4k-rq-1920x1080.jpg"
+                alt=""
+                className="quiz-box-answer-image"
+              />
+              <span className="quiz-box-answer-text">
+                Lorem ipsum dolor sit amet.
+              </span>
+            </div>
+
+            <div className="quiz-box-answer">
+              <img
+                src="./images/elon-musk-4k-rq-1920x1080.jpg"
+                alt=""
+                className="quiz-box-answer-image"
+              />
+              <span className="quiz-box-answer-text">
+                Lorem ipsum dolor sit amet.
+              </span>
+            </div>
+
+            <div className="quiz-box-answer">
+              <img
+                src="./images/elon-musk-4k-rq-1920x1080.jpg"
+                alt=""
+                className="quiz-box-answer-image"
+              />
+              <span className="quiz-box-answer-text">
+                Lorem ipsum dolor sit amet.
+              </span>
+            </div>
+            
           </div>
 
           <div className="quiz-box__bottom">
