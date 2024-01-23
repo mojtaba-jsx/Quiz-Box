@@ -6,9 +6,9 @@ class App extends Component {
       <div className="app">
         <div className="quiz-box">
           <div className="quiz-box__top">
-            <div className="quiz-box__top-logo">Quiz Box</div>
-            <div className="quiz-box__top-true-value">
-              <span className="quiz-box__top-true-value-logo">
+            <div className="quiz-box__top-logo">
+              <span className="quiz-box__top-logo-text">Quiz Box</span>
+              <span className="quiz-box__top-logo-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -20,11 +20,52 @@ class App extends Component {
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="m4.5 12.75 6 6 9-13.5"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
                   />
                 </svg>
               </span>
-              <span className="quiz-box__top-true-value-text">4</span>
+            </div>
+
+            <div className="quiz-box__top-values">
+              <div className="quiz-box__top-true-value">
+                <span className="quiz-box__top-true-value-logo">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                </span>
+                <span className="quiz-box__top-true-value-text">4</span>
+              </div>
+
+              <div className="quiz-box__top-false-value">
+                <span className="quiz-box__top-false-value-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+                <span className="quiz-box__top-false-value-text">2</span>
+              </div>
             </div>
           </div>
 
@@ -79,7 +120,6 @@ class App extends Component {
                 Lorem ipsum dolor sit amet.
               </span>
             </div>
-            
           </div>
 
           <div className="quiz-box__bottom">
