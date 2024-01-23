@@ -1,6 +1,118 @@
 import React, { Component } from "react";
 import "./App.css";
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      questions: [
+        {
+          questionText: "What is the capital of France?",
+          answerOptions: [
+            {
+              answerText: "New York",
+              image: "./images/NewYork.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "London",
+              image: "./images/London.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "Paris",
+              image: "./images/paris.jpg",
+              isCorrect: true,
+            },
+            {
+              answerText: "Dubai",
+              image: "./images/dubai.jpg",
+              isCorrect: false,
+            },
+          ],
+        },
+        {
+          questionText: "Who is CEO of Tesla?",
+          answerOptions: [
+            {
+              answerText: "Jeff Bezos",
+              image: "./images/jeffBezos.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "Elon Musk",
+              image: "./images/elon-musk.jpg",
+              isCorrect: true,
+            },
+            {
+              answerText: "Mark Zuckerberg",
+              image: "./images/mark zackerberg.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "Tony Stark",
+              image: "./images/tony stark.jpg",
+              isCorrect: false,
+            },
+          ],
+        },
+        {
+          questionText: "The iPhone was created by which company?",
+          answerOptions: [
+            {
+              answerText: "Apple",
+              image: "./images/apple.jpg",
+              isCorrect: true,
+            },
+            {
+              answerText: "Intel",
+              image: "./images/intel.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "Amazon",
+              image: "./images/amazon.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "Microsoft",
+              image: "./images/microsoft.jpg",
+              isCorrect: false,
+            },
+          ],
+        },
+        {
+          questionText: "How many Harry Potter books are there?",
+          answerOptions: [
+            {
+              answerText: "1",
+              image: "./images/harry-potter-1.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "4",
+              image: "./images/harry-potter-2.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "6",
+              image: "./images/harry-potter-3.jpg",
+              isCorrect: false,
+            },
+            {
+              answerText: "7",
+              image: "./images/harry-potter-4.jpg",
+              isCorrect: true,
+            },
+          ],
+        },
+      ],
+      currentQuestion: 0,
+      showScore: false,
+      score: 0,
+    };
+  }
+
   render() {
     return (
       <div className="app">
