@@ -159,3 +159,35 @@ body{
 
 
 }
+
+.final-score-box{
+  display: block;
+  margin: 0 auto;
+  width: 40rem;
+  height: 30rem;
+  background-color: #305097;
+  border-radius: 2rem;
+  text-align: center;
+  line-height: 20rem;
+  font-family: 'sora-bold', Courier, monospace;
+  font-size: 2rem;
+
+}
+
+.score{
+  color: white;
+  width: 100%;
+  height: 2rem;
+}
+
+.score-true{
+  color: #ABF770;
+  width: 100%;
+  height: 2rem;
+}
+.score-true{
+  height: 2rem;
+}
+.final-score span{
+
+}

@@ -91,7 +91,7 @@ class App extends Component {
             },
             {
               answerText: "4",
-              image: "./images/harry-potter-2.jpg",
+              image: "./images/harrry-potter-2.jpg",
               isCorrect: false,
             },
             {
@@ -111,6 +111,29 @@ class App extends Component {
       showScore: false,
       score: 0,
     };
+  }
+
+  clickHandler(icCorrect) {
+    console.log(icCorrect);
+    if (icCorrect) {
+      this.setState((prevState) => {
+        return {
+          score: prevState.score + 1,
+        };
+      });
+    }
+
+    if (this.state.currentQuestion === 3) {
+      this.setState({
+        showScore: true,
+      });
+    } else {
+      this.setState((prevState) => {
+        return {
+          currentQuestion: prevState.currentQuestion + 1,
+        };
+      });
+    }
   }
 
   render() {
@@ -156,7 +179,9 @@ class App extends Component {
                     />
                   </svg>
                 </span>
-                <span className="quiz-box__top-true-value-text">4</span>
+                <span className="quiz-box__top-true-value-text">
+                  {this.state.score}
+                </span>
               </div>
 
               <div className="quiz-box__top-false-value">
@@ -183,59 +208,42 @@ class App extends Component {
 
           <div className="quiz-box-question">
             <p className="quiz-box-question-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
-              hic.
+              {this.state.questions[this.state.currentQuestion].questionText}
             </p>
           </div>
 
-          <div className="quiz-box-answers">
-            <div className="quiz-box-answer">
-              <img
-                src="./images/elon-musk-4k-rq-1920x1080.jpg"
-                alt=""
-                className="quiz-box-answer-image"
-              />
-              <span className="quiz-box-answer-text">
-                Lorem ipsum dolor sit amet.
+          {this.state.showScore ? (
+            <div className="final-score-box">
+              <span className="final-score">
+                Final Score:{this.state.score}
               </span>
             </div>
-
-            <div className="quiz-box-answer">
-              <img
-                src="./images/elon-musk-4k-rq-1920x1080.jpg"
-                alt=""
-                className="quiz-box-answer-image"
-              />
-              <span className="quiz-box-answer-text">
-                Lorem ipsum dolor sit amet.
-              </span>
+          ) : (
+            <div className="quiz-box-answers">
+              {this.state.questions[
+                this.state.currentQuestion
+              ].answerOptions.map((answer) => (
+                <div
+                  className="quiz-box-answer"
+                  onClick={this.clickHandler.bind(this, answer.isCorrect)}
+                >
+                  <img
+                    src={answer.image}
+                    alt=""
+                    className="quiz-box-answer-image"
+                  />
+                  <span className="quiz-box-answer-text">
+                    {answer.answerText}
+                  </span>
+                </div>
+              ))}
             </div>
-
-            <div className="quiz-box-answer">
-              <img
-                src="./images/elon-musk-4k-rq-1920x1080.jpg"
-                alt=""
-                className="quiz-box-answer-image"
-              />
-              <span className="quiz-box-answer-text">
-                Lorem ipsum dolor sit amet.
-              </span>
-            </div>
-
-            <div className="quiz-box-answer">
-              <img
-                src="./images/elon-musk-4k-rq-1920x1080.jpg"
-                alt=""
-                className="quiz-box-answer-image"
-              />
-              <span className="quiz-box-answer-text">
-                Lorem ipsum dolor sit amet.
-              </span>
-            </div>
-          </div>
+          )}
 
           <div className="quiz-box__bottom">
-            <span className="quiz-box__bottom-qustion-number">4/10</span>
+            <span className="quiz-box__bottom-qustion-number">
+              {this.state.currentQuestion + 1}/{this.state.questions.length}
+            </span>
           </div>
         </div>
       </div>
